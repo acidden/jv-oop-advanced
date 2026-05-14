@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 15;
     private final Random random = new Random();
 
@@ -13,7 +14,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
