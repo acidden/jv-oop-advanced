@@ -10,7 +10,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(10,"white");
+        return new Circle(10,"WHITE");
     }
 
     public Figure getRandomFigure() {
@@ -31,12 +31,11 @@ public class FigureSupplier {
             case 3:
                 int radius = random.nextInt(MAX_VALUE);
                 return new Circle(radius, color);
-            case 4:
+            default:
                 int baseA = random.nextInt(MAX_VALUE);
                 int baseB = random.nextInt(MAX_VALUE);
                 int heightC = random.nextInt(MAX_VALUE);
                 return new IsoscelesTrapezoid(baseA, baseB, heightC, color);
-            default: return getDefaultFigure();
         }
     }
 }
