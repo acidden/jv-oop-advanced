@@ -10,7 +10,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(10,"WHITE");
+        return new Circle(10,"white");
     }
 
     public Figure getRandomFigure() {
